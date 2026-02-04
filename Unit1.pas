@@ -25,9 +25,10 @@ implementation
 procedure Form1.Form1_Paint(sender: Object; e: PaintEventArgs);
 begin
   var g := e.Graphics;
+  var oRedPen := new Pen(Color.Red, 5);
   g.Clear(Color.Black);
-  g.DrawEllipse(Pens.Yellow, 0, 0, ClientSize.Width, ClientSize.Height);
-  g.FillEllipse(Brushes.Red, 0, 0, ClientSize.Width, ClientSize.Height);
+  g.DrawEllipse(oRedPen, 0, 0, ClientSize.Width, ClientSize.Height);
+  g.FillEllipse(Brushes.Yellow, 0, 0, ClientSize.Width, ClientSize.Height);
 end;
 
 procedure Form1.Form1_Resize(sender: Object; e: EventArgs);
